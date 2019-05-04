@@ -24,18 +24,18 @@ MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
         client.close();
     })*/
 
-    /*findDocuments(db, () => {
-            client.close();
-        })*/
+    findDocuments(db, () => {
+        client.close();
+    });
     /*updateDocument(db, () => {
         client.close();
     });*/
     /*removeDocument(db, () => {
         client.close();
     });*/
-    indexCollection(db, () => {
+    /*indexCollection(db, () => {
         client.close();
-    });
+    });*/
 
 
 });
@@ -138,8 +138,22 @@ const indexCollection = function(db, callback) {
 app.get('/', (req, res) => {
     res.send('Express is working');
 });
+// Post request
+app.post('/', (req, res) => {
+    res.send('Post request to the homepage');
+});
+// All request for /secret rout
+/*app.all('/secret', (req, res) => {
+    console.log('Accesing the secret section ...');
+    res.send('Secret http request handle')
+});*/
+
+app.get('/users', (req, res) => {
+    res.send(req.params + "  " + req.path);
+
+});
 
 // Listening to port
 app.listen(port, () => {
     console.log('Server is running on port: ' + port);
-})
+});
