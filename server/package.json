@@ -1,23 +1,26 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "Express Server",
-  "main": "app",
-  "scripts": {
-    "test": "start"
-  },
-  "keywords": [
-    "node",
-    "express"
-  ],
-  "author": "Vardan Meliksetyan",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.16.4",
-    "mongodb": "^3.2.3",
-    "morgan": "^1.9.1"
-  },
-  "devDependencies": {
-    "nodemon": "^1.19.0"
-  }
+    "name": "server",
+    "version": "1.0.0",
+    "description": "Express Server",
+    "main": "app",
+    "scripts": {
+        "test": "start",
+        "profile": "node ./profile/cpu-profile.js",
+        "diag": "node ./profile/diagnostics.js"
+    },
+    "keywords": [
+        "node",
+        "express"
+    ],
+    "author": "Vardan Meliksetyan",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.16.4",
+        "mongodb": "^3.2.3",
+        "morgan": "^1.9.1"
+    },
+    "devDependencies": {
+        "diagnostics": "^2.0.0",
+        "nodemon": "^1.19.0"
+    }
 }
